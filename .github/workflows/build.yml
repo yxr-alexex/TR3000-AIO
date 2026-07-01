@@ -12,7 +12,7 @@ permissions:
 
 env:
   REPO_URL: https://github.com/openwrt/openwrt.git
-  REPO_BRANCH: openwrt-25.05
+  REPO_BRANCH: openwrt-main
   CONFIG_FILE: config/tr3000.config
 
 jobs:
