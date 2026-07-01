@@ -1,0 +1,9 @@
+bin/
+build_dir/
+dl/
+staging_dir/
+tmp/
+logs/
+*.img
+*.bin
+*.tar
