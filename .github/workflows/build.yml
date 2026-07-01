@@ -42,7 +42,7 @@ jobs:
 
       - name: Clone OpenWrt
         run: |
-          git clone --depth=1 -b ${REPO_BRANCH} ${REPO_URL} openwrt
+          git clone --depth=1 https://github.com/openwrt/openwrt.git openwrt
 
       - name: Show OpenWrt Version
         run: |
