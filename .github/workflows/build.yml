@@ -1,26 +1,32 @@
-name: TR3000-AIO Build
+name: Build OpenWrt for TR3000
 
 on:
   workflow_dispatch:
 
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+env:
+  REPO_URL: https://github.com/openwrt/openwrt.git
+  REPO_BRANCH: openwrt-25.05
+  CONFIG_FILE: config/tr3000.config
+
 jobs:
-  test:
+  build:
     runs-on: ubuntu-24.04
 
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Show System Information
+      - name: Show Runner Information
         run: |
-          echo "================================="
-          echo "TR3000-AIO Build Environment"
-          echo "================================="
+          echo "=== Runner ==="
           uname -a
           lscpu
+          free -h
           df -h
-
-      - name: Build Test
-        run: |
-          echo "Hello TR3000-AIO"
-          echo "GitHub Actions is working!"

@@ -1,4 +1,4 @@
-# TR3000-AIO
+# OpenWrt for Cudy TR3000 (128MB)
 
 Custom OpenWrt firmware for Cudy TR3000 (128MB).
 
@@ -6,16 +6,12 @@ Custom OpenWrt firmware for Cudy TR3000 (128MB).
 
 - OpenWrt Official Stable
 - Nikki
-- LuCI Chinese
+- LuCI 中文
 - Asia/Shanghai
 - Bash
-- SSH
+- SSH (Root + Public Key)
 - Software Flow Offload
 - Hardware Flow Offload
 - CAKE SQM
 - USB Storage
 - QMI WWAN
-
-## Build
-
-Built automatically by GitHub Actions.
