@@ -48,6 +48,7 @@ jobs:
         run: |
           cd openwrt
           cat include/version.mk
+ 
       - name: Update feeds
         run: |
           cd openwrt
@@ -57,3 +58,13 @@ jobs:
         run: |
           cd openwrt
           ./scripts/feeds install -a
+
+      - name: Prepare configuration
+        run: |
+          cd openwrt
+          make defconfig
+
+      - name: Show target
+        run: |
+          cd openwrt
+          grep CONFIG_TARGET .config || true
